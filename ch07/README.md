@@ -31,7 +31,7 @@ the condition of the `if` statement would read two Sales_data object at one time
 ## [Exercise 7.13](ex7_13.cpp)
 ## Exercise 7.14
 ```cpp
-Sales_data() : units_sold(0) , revenue(0){ }
+Sales_data() : bookNo(""), units_sold(0) , revenue(0){ }
 ```
 
 ## [Exercise 7.15](ex7_15.h)
@@ -82,7 +82,7 @@ the interface should be defined as public, the data shouldn't expose to outside 
 
 ## [Exercise 7.21](ex7_21.h)
 ## [Exercise 7.22](ex7_22.h)
-## Exercise 7.23 [Header](ex7_23.h)|[CPP](ex7_23.cpp)
+## [Exercise 7.23](ex7_23.h)
 ## [Exercise 7.24](ex7_24.h)
 
 ## Exercise 7.25
@@ -309,7 +309,7 @@ Drawbacks:
 
 ## Exercise 7.48
 
-Both are noting happened.
+Both are nothing happened.
 
 ## Exercise 7.49
 
@@ -364,7 +364,7 @@ struct Sales_data {
 
 ## Exercise 7.54
 
-shouldn't, cause a `constexpr` function must contain exactly one **return** statement.
+in C++11, constexpr member functions are implicitly const, so the "set_xx" functions, which will modify data members, cannot be declared as constexpr. In C++14, this property no longer holds, so constexpr is suitable.
 
 ## Exercise 7.55
 
