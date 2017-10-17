@@ -18,7 +18,7 @@ This strategy presents a trade-off between efficient code generation
 and potential pitfalls in the use of the language by the programmer.
 Do you consider that an acceptable trade-off? Why or why not?
 
-No. IMHO, such desgin cann't improve performance siginificantly, but make bugs every tricky to handle.
+No. IMHO, such design cannot improve performance siginificantly, but it can make bugs very tricky to handle.
 
 ## Exercise 4.4
 >Parenthesize the following expression to show how it is evaluated.
@@ -229,7 +229,7 @@ The final value in decimal is `-7296`.
 ## Exercise 4.26
 >In our grading example in this section, what would happen if we used unsigned int as the type for quiz1?
 
-The C++ standard does not specify the size of integral types in bytes, but it specifies minimum ranges they must be able to hold. Minimum mange of `unsigned int` is 0 to 65535. Thus if `unsigned int` adopted, the result is undefined.
+The C++ standard does not specify the size of integral types in bytes, but it specifies minimum ranges they must be able to hold. The minimum range of `unsigned int` is 0 to 65535. Since some implementations use only the minimum 16 bits for `unsigned int`, this could cause undefined behavior.
 
 
 ## Exercise 4.27
@@ -239,7 +239,7 @@ unsigned long ul1 = 3, ul2 = 7;
 ul1 & ul2 // == 3
 ul1 | ul2 // == 7
 ul1 && ul2 // == true
-ul1 || ul2 // == ture
+ul1 || ul2 // == true
 ```
 
 ## [Exercise 4.28](ex4_28.cpp)

@@ -159,15 +159,15 @@ void print(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 
 >why is `s` a reference to const but `occurs` is a plain reference?
 
-cause the `s` should not be changed by this function. but `occurs`'s result must be calculated by the function.
+Because `s` should not be changed by this function, but `occurs` result must be calculated by the function.
 
 >Why are these parameters references, but the char parameter `c` is not?
 
-cause `c` may be a temp varable, such as `find_char(s, 'a', occurs)`
+Because `c` may be a temp varable, such as `find_char(s, 'a', occurs)`
 
 >What would happen if we made `s` a plain reference? What if we made `occurs` a reference to const?
 
-`s` could be changed in the function, and `occurs` whould not be changed. so `occurs = 0;` is an error.
+`s` could be changed in the function, and `occurs` would not be changed. so `occurs = 0;` is an error.
 
 ## Exercise 6.16
 ```cpp
@@ -340,7 +340,7 @@ diagnostic required. (N3690 §7.1.5 [dcl.constexpr]/5)
 
 This loop let user input a word all the way until the word is sought.
 
-It isn't a good use of assert. because if user begin to input a word, the `cin` would be always have content. so the `assert` would be always `true`. It is meaningless. using `assert(s == sought)` is more better.
+It isn't a good use of assert. because if user begin to input a word, the `cin` would be always have content. so the `assert` would be always `true`. It is meaningless. using `assert(s == sought)` is better.
 
 ## Exercise 6.49
 
